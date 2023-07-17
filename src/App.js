@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import MainPage from "./components/RegisterPage/MainPage";
-import { GoogleLogout } from "react-google-login";
+import MainRoutes from "./components/Routes/MainRoutes";
 
 const App = () => {
   return (
     <div>
-      <MainPage />
+      <MainRoutes />;
     </div>
   );
 };
