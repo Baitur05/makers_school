@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import MainRoutes from "./components/Routes/MainRoutes";
 
 const App = () => {
   return (
     <div>
-      <MainRoutes />;
+      <MainRoutes />
     </div>
   );
 };
