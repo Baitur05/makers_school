@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+
 function ActivationPage() {
+  const { t } = useTranslation();
   return (
     <div className="text-center mt-[8%] text-white text-xl">
       <div className="mb-24">
@@ -11,22 +14,23 @@ function ActivationPage() {
         </h1>
       </div>
       <div className="text-center leading-[1.5] text-2xl">
-        На вашу
+        {t("to_your")}
         <br />
-        почту отправлена ссылка
+        {t("email_sent_link")}
         <br />
-        для сброса пароля
+         {t("to_reset_your_password")}
       </div>
       <Link to="/password">
-        <button className="my-10">Сюда</button>
+        <button className="my-10">Сюда &gt;</button>
       </Link>
+      
       <div className="flex justify-center mt-10">
         <div className="w-1/3 bg-green-300 bg-opacity-20 border-blue-500 text-blue-700 p-2">
-          Подтвердите почту, чтобы активировать аккаунт
+           {t("confirm_mail")}
           <p className="text-black">
-            Если письмо не пришло, проверьте папку "спам" или
+            {t("if_the_letter_did_not_arrive")}
             <Link to="/forgot">
-              <span className="text-red-500 pl-2">повторите активацию</span>
+              <span className="text-red-500 pl-2">{t("repeat_activation")}</span>
             </Link>
           </p>
         </div>

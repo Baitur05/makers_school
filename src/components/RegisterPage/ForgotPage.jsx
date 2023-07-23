@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ForgotPage() {
+  const { t, i18n } = useTranslation();
+  const [placeholderText, setPlaceholderText] = useState("");
+
+  useEffect(() => {
+    setPlaceholderText(t("google"));
+  }, [t, i18n.language]);
   return (
     <div className="text-center  mt-[8%] text-white text-xl">
       <div>
@@ -19,19 +26,19 @@ function ForgotPage() {
         <div>
           <Link to="/activation">
             <button className="bg-white hover:bg-[#2B59C3] py-2 px-10 rounded-lg mb-1 mt-6 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white">
-              Сбросить пароль
+              {t("reset_the_password")}
             </button>
           </Link>
         </div>
         <Link to="/auth">
           <button className="text-[#2B59C3] mb-14 pl-32 text-lg hover:text-white">
-            Вспомнил пароль
+            {t('Remembered_the_password')}
           </button>
         </Link>
       </div>
       <div className="flex justify-center">
         <p>______________</p>
-        <p className="mb-2 px-2 pt-2">или</p>
+        <p className="mb-2 px-2 pt-2">{t("or")}</p>
         <p>______________</p>
       </div>
       <button>
@@ -47,7 +54,7 @@ function ForgotPage() {
             {/* Для гугла второй вариант */}
             <input
               className="bg-white hover:bg-[#2B59C3] py-2 px-7 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white cursor-pointer"
-              placeholder="Войти через Google"
+              placeholder={placeholderText}
             />
           </div>
         </Link>
@@ -55,7 +62,7 @@ function ForgotPage() {
           href="/authPasswordPage"
           className="text-[#2B59C3] mb-4 pl-20 text-lg hover:text-white"
         >
-          Зарегистрироваться
+           {t('register')}
         </a>
       </button>
     </div>

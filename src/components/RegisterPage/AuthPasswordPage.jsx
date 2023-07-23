@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function AuthPasswordPage() {
   const responseGoogle = (res) => {
@@ -10,6 +11,16 @@ function AuthPasswordPage() {
     console.log(details);
     // setUser(details);
   };
+  const { t, i18n } = useTranslation();
+  const [placeholderText, setPlaceholderText] = useState("");
+const [placeholderText2, setPlaceholderText2] = useState("")
+  useEffect(() => {
+    setPlaceholderText(t("google"));
+  }, [t, i18n.language]);
+
+  useEffect (()=> {
+    setPlaceholderText2(t("Repeat_password"));
+  },  [t, i18n.language]);
   return (
     <div className="text-center mt-[8%] text-white text-xl">
       <div>
@@ -37,7 +48,7 @@ function AuthPasswordPage() {
           <input
             type="Password"
             className="bg-white hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
-            placeholder="Повторите пароль"
+            placeholder={placeholderText2}
           />
         </div>
         <div>
@@ -46,14 +57,14 @@ function AuthPasswordPage() {
               type="button"
               className="bg-white hover:bg-[#2B59C3] py-2 px-12 rounded-lg mb-10 mt-14 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
             >
-              Продолжить
+             {t("continue")}
             </button>
           </Link>
         </div>
       </div>
       <div className="flex justify-center">
         <p>______________</p>
-        <p className="mb-2 px-2 pt-2">или</p>
+        <p className="mb-2 px-2 pt-2">{t("or")}</p>
         <p>______________</p>
       </div>
       <button>
@@ -69,7 +80,7 @@ function AuthPasswordPage() {
             {/* Для гугла второй вариант */}
             <input
               className="bg-white hover:bg-[#2B59C3] py-2 px-7 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white cursor-pointer"
-              placeholder="Войти через Google"
+              placeholder={placeholderText}
             />
           </div>
         </Link>
@@ -77,7 +88,7 @@ function AuthPasswordPage() {
           href="/authPasswordPage"
           className="text-[#2B59C3] mb-4 pl-20 text-lg hover:text-white"
         >
-          Зарегистрироваться
+         {t('register')}
         </a>
       </button>
     </div>
