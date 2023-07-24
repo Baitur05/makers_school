@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import MainRoutes from "./components/Routes/MainRoutes";
+import Footer from "./components/Footer/Footer";
+import Partners from "./components/Partners/Partners";
+import Card from "./components/Cards/Card";
 // import { useTranslation } from "react-i18next";
 
 const App = () => {
@@ -19,7 +22,11 @@ const App = () => {
 
   return (
     <div>
-      <MainRoutes />;
+      <div className="mt-96"></div>
+      <Card />
+      <Partners />
+      {/* <MainRoutes />; */}
+      <Footer />
       {/* <div className="text-center mt-[8%] text-white text-xl">
         <select onChange={changeLanguage} value={language}>
           <option value="ru">RU</option>
