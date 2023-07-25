@@ -68,7 +68,7 @@ const [placeholderText2, setPlaceholderText2] = useState("")
         <p>______________</p>
       </div>
       <button>
-        <Link to="/goolePage">
+        <Link to="/googlePage">
           <div>
             {/* <GoogleOAuthProvider clientId="151557883450-ellj7a9fr46a4cadbi2d8tkfk0mq9jm1.apps.googleusercontent.com">
           <GoogleLogin

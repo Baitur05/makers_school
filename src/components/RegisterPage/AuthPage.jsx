@@ -17,10 +17,15 @@ const AuthPage = ({ user, setUser }) => {
 
   const { t, i18n } = useTranslation();
   const [placeholderText, setPlaceholderText] = useState("");
+  // const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     setPlaceholderText(t("google"));
   }, [t, i18n.language]);
+
+  // const handlePasswordToggle = () => {
+  //   setShowPassword((prevShowPassword) => !prevShowPassword);
+  // };
 
   return (
     <div className="text-center mt-[8%] text-white text-xl">
@@ -38,24 +43,27 @@ const AuthPage = ({ user, setUser }) => {
             placeholder="Email"
           />
         </div>
-        <div>
+        <div className="password__div">
           <input
             type="password"
             className="bg-white hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
             placeholder="Пароль"
           />
+          <div className="password__btn"><img className="img__btn" src="https://cdn-icons-png.flaticon.com/512/6684/6684701.png" alt="img"/></div>
         </div>
         <div className="mb-4 pl-40 text-lg">
           <a href="/forgot" className="text-[#2B59C3] hover:text-white">
             {t("forgot_password")}
           </a>
         </div>
+        <Link to="/appMainPage">
         <button
           type="button"
           className="bg-white hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-6 text-[#2B59C3] hover:text-white"
         >
          {t('to_come_in')}
         </button>
+        </Link>
       </form>
       <ul className="mt-7 mb-18"></ul>
       <div className="flex justify-center">
@@ -64,7 +72,7 @@ const AuthPage = ({ user, setUser }) => {
         <p>______________</p>
       </div>
       <button>
-        <Link to="/goolePage">
+        <Link to="/googlePage">
           <div>
             {/* <GoogleOAuthProvider clientId="151557883450-ellj7a9fr46a4cadbi2d8tkfk0mq9jm1.apps.googleusercontent.com">
           <GoogleLogin

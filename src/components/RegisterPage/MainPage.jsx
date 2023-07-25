@@ -14,8 +14,7 @@ const MainPage = ({ user, setUser }) => {
   };
 
  
-  const { t, i18n } = useTranslation();
-  const [placeholderText, setPlaceholderText] = useState("");
+
 
   // const handleLanguageChange = (e) => {
   //   const newLanguage = e.target.value;
@@ -23,11 +22,12 @@ const MainPage = ({ user, setUser }) => {
   //   i18n.changeLanguage(newLanguage);
   // };
 
+  const { t, i18n } = useTranslation();
+  const [placeholderText, setPlaceholderText] = useState("");
   const handleLanguageChange = (e) => {
     const newLanguage = e.target.value;
     i18n.changeLanguage(newLanguage);
   };
-
 
   useEffect(() => {
     setPlaceholderText(t("google"));
@@ -40,7 +40,7 @@ const MainPage = ({ user, setUser }) => {
       </div> */}
       
       {/*! Мультиязычный */}
-      <div >
+      <div className="text-center mt-[6%] ">
       <select onChange={handleLanguageChange} value={i18n.language}>
           <option value="ru">RU</option>
           <option value="kg">KG</option>
@@ -76,7 +76,7 @@ const MainPage = ({ user, setUser }) => {
           <p>______________</p>
         </div>
         <button>
-          <Link to="/goolePage">
+          <Link to="/googlePage">
             <div>
               {/* <GoogleOAuthProvider clientId="151557883450-ellj7a9fr46a4cadbi2d8tkfk0mq9jm1.apps.googleusercontent.com">
           <GoogleLogin
@@ -88,7 +88,6 @@ const MainPage = ({ user, setUser }) => {
               {/* Для гугла второй вариант */}
               <input
                 className=" bg-white hover:bg-[#2B59C3] py-2 px-7 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white cursor-pointer"
-                
                 placeholder={placeholderText}
               />
             </div>

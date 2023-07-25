@@ -22,8 +22,8 @@ function MainRoutes() {
         <Route path="/password" element={<PasswordPage />} exact />
         <Route path="/authPasswordPage" element={<AuthPasswordPage exact />} />
         <Route path="/authMainPage" element={<AuthMainPage exact />} />
-        <Route path="/goolePage" element={<GooglePage />} exact />
-        <Route path="/..." element={<NotFoundPage />} exact />
+        <Route path="/googlePage" element={<GooglePage />} exact />
+        <Route path="/appMainPage" element={<NotFoundPage />} exact />
       </Route>
     </Routes>
   );

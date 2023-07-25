@@ -70,7 +70,7 @@ i18n
         },
       },
     },
-    fallbackLng: 'ru', // Default language if translation for the chosen language is not found
+    fallbackLng: 'ru', 
     interpolation: {
       escapeValue: false,
     },

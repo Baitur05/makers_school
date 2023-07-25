@@ -10,7 +10,7 @@ function GooglePage() {
         maker
         <span className="bg-white text-black px-1">s</span>
       </h1>
-      <p className="text-white mt-8">Вход {t("entrance")}</p>
+      <p className="text-white mt-8">{t("entrance")}</p>
       <div className="px-[38%]">
         <input
           type="text"
