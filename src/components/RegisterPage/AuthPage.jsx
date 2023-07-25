@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
 import { Link } from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
@@ -17,7 +16,7 @@ const AuthPage = ({ user, setUser }) => {
 
   const { t, i18n } = useTranslation();
   const [placeholderText, setPlaceholderText] = useState("");
-  // const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setPlaceholderText(t("google"));
@@ -49,7 +48,7 @@ const AuthPage = ({ user, setUser }) => {
             className="bg-white hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
             placeholder="Пароль"
           />
-          <div className="password__btn"><img className="img__btn" src="https://cdn-icons-png.flaticon.com/512/6684/6684701.png" alt="img"/></div>
+         
         </div>
         <div className="mb-4 pl-40 text-lg">
           <a href="/forgot" className="text-[#2B59C3] hover:text-white">
@@ -84,7 +83,7 @@ const AuthPage = ({ user, setUser }) => {
             {/* Для гугла второй вариант */}
             <input
               className="bg-white hover:bg-[#2B59C3] py-2 px-7 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white cursor-pointer"
-                placeholder={placeholderText}
+                
             />
           </div>
         </Link>

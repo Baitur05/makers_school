@@ -11,9 +11,11 @@ function AuthPasswordPage() {
     console.log(details);
     // setUser(details);
   };
+
   const { t, i18n } = useTranslation();
   const [placeholderText, setPlaceholderText] = useState("");
-const [placeholderText2, setPlaceholderText2] = useState("")
+  const [placeholderText2, setPlaceholderText2] = useState("")
+
   useEffect(() => {
     setPlaceholderText(t("google"));
   }, [t, i18n.language]);
@@ -21,6 +23,7 @@ const [placeholderText2, setPlaceholderText2] = useState("")
   useEffect (()=> {
     setPlaceholderText2(t("Repeat_password"));
   },  [t, i18n.language]);
+
   return (
     <div className="text-center mt-[8%] text-white text-xl">
       <div>

@@ -9,6 +9,7 @@ function ForgotPage() {
   useEffect(() => {
     setPlaceholderText(t("google"));
   }, [t, i18n.language]);
+  
   return (
     <div className="text-center  mt-[8%] text-white text-xl">
       <div>
