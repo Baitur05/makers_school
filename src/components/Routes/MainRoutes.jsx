@@ -10,12 +10,14 @@ import GooglePage from "../RegisterPage/GooglePage";
 import MainLayout from "../layouts/MainLayout";
 import AuthPage from "../RegisterPage/AuthPage";
 import NotFoundPage from "../RegisterPage/NotFoundPage";
+import GlavPage from "../Pages/GlavPage";
 
 function MainRoutes() {
   return (
     <Routes>
       <Route element={<MainLayout />} exact>
         <Route path="/" element={<MainPage />} exact />
+        <Route path="/glav" element={<GlavPage />} exact />
         <Route path="/auth" element={<AuthPage />} exact />
         <Route path="/forgot" element={<ForgotPage />} exact />
         <Route path="/activation" element={<ActivationPage exact />} />
