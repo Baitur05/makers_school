@@ -24,8 +24,8 @@ const App = () => {
     <div>
       <div className="mt-96"></div>
       <Card />
-      <Partners />
       <MainRoutes />;
+      <Partners />
       <Footer />
       {/* <div className="text-center mt-[8%] text-white text-xl">
         <select onChange={changeLanguage} value={language}>

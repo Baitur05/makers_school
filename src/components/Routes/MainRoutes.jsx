@@ -10,6 +10,7 @@ import GooglePage from "../RegisterPage/GooglePage";
 import MainLayout from "../layouts/MainLayout";
 import AuthPage from "../RegisterPage/AuthPage";
 import NotFoundPage from "../RegisterPage/NotFoundPage";
+import DesktopOne from "../RegisterPage/DesktopOne";
 
 function MainRoutes() {
   return (
@@ -24,6 +25,7 @@ function MainRoutes() {
         <Route path="/authMainPage" element={<AuthMainPage exact />} />
         <Route path="/googlePage" element={<GooglePage />} exact />
         <Route path="/appMainPage" element={<NotFoundPage />} exact />
+        <Route path="/desktop" element={<DesktopOne />} exact />
       </Route>
     </Routes>
   );
