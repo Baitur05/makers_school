@@ -26,6 +26,7 @@ const MainPage = ({ user, setUser }) => {
     return () => clearTimeout(timer);
   }, []);
 
+
   // const handleLanguageChange = (e) => {
   //   const newLanguage = e.target.value;
   //   console.log("Changing language to:", newLanguage);
@@ -34,6 +35,7 @@ const MainPage = ({ user, setUser }) => {
 
   const { t, i18n } = useTranslation();
   const [placeholderText, setPlaceholderText] = useState("");
+
 
   const handleLanguageChange = (e) => {
     const newLanguage = e.target.value;
@@ -72,15 +74,15 @@ const MainPage = ({ user, setUser }) => {
               <Link to="/auth">
                 <button
                   type="button"
-                  className="bg-white hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-36 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
+                  className=" hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-36 text-[#2B59C3] hover:text-white bg-white"
                 >
                   Войти
                 </button>
               </Link>
-              <Link to="/authPasswordPage">
+              <Link to="/glav">
                 <ul className="mt-7 mb-14">
                   <a className="text-[#2B59C3] hover:text-white">
-                    Зарегистрироваться
+                    Войти как гость
                   </a>
                 </ul>
               </Link>

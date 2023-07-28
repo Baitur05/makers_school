@@ -4,7 +4,11 @@ import MainRoutes from "./components/Routes/MainRoutes";
 import Footer from "./components/Footer/Footer";
 import Partners from "./components/Partners/Partners";
 import Card from "./components/Cards/Card";
+
+import SearchComponent from "./components/Search/SearchComponent ";
 import { useTranslation } from "react-i18next";
+import { Router } from "react-router-dom";
+
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -24,16 +28,10 @@ const App = () => {
     <div>
       <div className="mt-96"></div>
       <Card />
-      <MainRoutes />;
+      <MainRoutes />
       <Partners />
       <Footer />
-      {/* <div className="text-center mt-[8%] text-white text-xl">
-        <select onChange={changeLanguage} value={language}>
-          <option value="ru">RU</option>
-          <option value="kg">KG</option>
-        </select>
-        <div>{t("text")}</div>
-      </div> */}
+      {/* Остальной код был закомментирован, и его можно добавить обратно при необходимости */}
     </div>
   );
 };

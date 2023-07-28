@@ -4,11 +4,13 @@ import part2 from "../img/part2.png";
 import part3 from "../img/part3.png";
 import part4 from "../img/part4.png";
 import part5 from "../img/part5.png";
+import { useTranslation } from "react-i18next";
 
 const Partners = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="text-center mb-10">
-      <h2 className="text-2xl mb-10 text-[#2B59C3]">Наши партнеры</h2>
+      <h2 className="text-2xl mb-10 text-[#2B59C3]">{t("partners")}</h2>
       <div>
         <div className="flex justify-around  mb-6">
           <a className="w-60" target="_blank" href="https://cleverest.tech/">

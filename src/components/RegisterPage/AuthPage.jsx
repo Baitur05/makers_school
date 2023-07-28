@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
 
-
-
 const AuthPage = ({ user, setUser }) => {
   const responseGoogle = (res) => {
     const details = jwtDecode(res.credential);
@@ -45,22 +43,22 @@ const AuthPage = ({ user, setUser }) => {
         <div className="password__div">
           <input
             type="password"
-            className="bg-white hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
+            className="bg-[#f8fafc] hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
             placeholder="Пароль"
           />
          
         </div>
         <div className="mb-4 pl-40 text-lg">
-          <a href="/forgot" className="text-[#2B59C3] hover:text-white">
+          <Link to="/forgot" className="text-[#2B59C3] hover:text-white">
             {t("forgot_password")}
-          </a>
+          </Link>
         </div>
         <Link to="/appMainPage">
         <button
           type="button"
-          className="bg-white hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-6 text-[#2B59C3] hover:text-white"
+          className="bg-[#f8fafc] hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-6 text-[#2B59C3] hover:text-white"
         >
-         {t('to_come_in')}
+          {t("to_come_in")}
         </button>
         </Link>
       </form>
@@ -83,16 +81,16 @@ const AuthPage = ({ user, setUser }) => {
             {/* Для гугла второй вариант */}
             <input
               className="bg-white hover:bg-[#2B59C3] py-2 px-7 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white cursor-pointer"
-                
+              placeholder={placeholderText}
             />
           </div>
         </Link>
-        <a
-          href="/authPasswordPage"
+        <Link
+          to="/authPasswordPage"
           className="text-[#2B59C3] mb-4 pl-20 text-lg hover:text-white"
         >
-        {t('register')}
-        </a>
+          {t("register")}
+        </Link>
       </button>
     </div>
   );

@@ -4,7 +4,7 @@
   border: 0;
 }
 body {
-  background: #000;
+  background: #1B1C1F;
 }
 
 /* .password__btn {
@@ -44,4 +44,11 @@ body {
   /* height: 50px; */
   /* background-color: #fefefe; */
   /* transform: rotate(45deg); */
+}
+
+.shadowLth {
+  border-radius: 44px;
+  box-shadow: black;
+  opacity: 0.78;
+  border-radius: 60px;
 }
