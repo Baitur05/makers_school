@@ -1,4 +1,5 @@
-const CardsData = [
+
+const CardsData = [ 
   {
     name: "Веб дизайн в Figma,основы UX/UI",
     duration: "Продолжительность курса: 1 месяц",

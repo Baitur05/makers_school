@@ -9,6 +9,7 @@ function ForgotPage() {
   useEffect(() => {
     setPlaceholderText(t("google"));
   }, [t, i18n.language]);
+  
   return (
     <div className="text-center  mt-[8%] text-white text-xl">
       <div>
@@ -42,7 +43,7 @@ function ForgotPage() {
         <p>______________</p>
       </div>
       <button>
-        <Link to="/goolePage">
+        <Link to="/googlePage">
           <div>
             {/* <GoogleOAuthProvider clientId="151557883450-ellj7a9fr46a4cadbi2d8tkfk0mq9jm1.apps.googleusercontent.com">
           <GoogleLogin

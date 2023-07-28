@@ -3,8 +3,11 @@ import inst from "../img/instagram.png";
 import youtube from "../img/youtube.png";
 import face from "../img/facebook.png";
 import maker from "../img/Combined Shape.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  
+  const { t } = useTranslation();
   return (
     <div className="flex justify-between px-20 pt-5 pb-8 bg-[#979797] text-[#FFFFFD]">
       <div>
@@ -15,10 +18,10 @@ const Footer = () => {
       </div>
       <div className="cursor-pointer">
         <ul>
-          <li>Курсы</li>
-          <li>Расписание</li>
-          <li>Поиск</li>
-          <li>Войти</li>
+          <li>{t("desktopTwo-1")}</li>
+          <li>{t("desktopTwo-2")}</li>
+          <li>{t("desktopTwo-3")}</li>
+          <li>{t("to_come_in")}</li>
         </ul>
       </div>
       <div>

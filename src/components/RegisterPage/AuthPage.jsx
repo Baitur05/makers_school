@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
 import { Link } from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
@@ -15,10 +14,15 @@ const AuthPage = ({ user, setUser }) => {
 
   const { t, i18n } = useTranslation();
   const [placeholderText, setPlaceholderText] = useState("");
+  // const [showPassword, setShowPassword] = useState(false);const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setPlaceholderText(t("google"));
   }, [t, i18n.language]);
+
+  // const handlePasswordToggle = () => {
+  //   setShowPassword((prevShowPassword) => !prevShowPassword);
+  // };
 
   return (
     <div className="text-center mt-[8%] text-white text-xl">
@@ -36,24 +40,27 @@ const AuthPage = ({ user, setUser }) => {
             placeholder="Email"
           />
         </div>
-        <div>
+        <div className="password__div">
           <input
             type="password"
-            className="bg-white hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
+            className="bg-[#f8fafc] hover:bg-[#2B59C3] py-2 px-8 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white"
             placeholder="Пароль"
           />
+         
         </div>
         <div className="mb-4 pl-40 text-lg">
           <Link to="/forgot" className="text-[#2B59C3] hover:text-white">
             {t("forgot_password")}
           </Link>
         </div>
+        <Link to="/appMainPage">
         <button
           type="button"
-          className="bg-white hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-6 text-[#2B59C3] hover:text-white"
+          className="bg-[#f8fafc] hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-6 text-[#2B59C3] hover:text-white"
         >
           {t("to_come_in")}
         </button>
+        </Link>
       </form>
       <ul className="mt-7 mb-18"></ul>
       <div className="flex justify-center">
@@ -62,7 +69,7 @@ const AuthPage = ({ user, setUser }) => {
         <p>______________</p>
       </div>
       <button>
-        <Link to="/goolePage">
+        <Link to="/googlePage">
           <div>
             {/* <GoogleOAuthProvider clientId="151557883450-ellj7a9fr46a4cadbi2d8tkfk0mq9jm1.apps.googleusercontent.com">
           <GoogleLogin

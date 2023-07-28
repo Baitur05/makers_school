@@ -63,7 +63,7 @@ function AuthMainPage() {
           />
         </div>
         <div>
-          <Link to="/...">
+          <Link to="/appMainPage">
             <button
               type="button"
               className="bg-white hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-6 text-[#2B59C3] hover:text-white"

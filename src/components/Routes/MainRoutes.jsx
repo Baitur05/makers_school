@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { Route, Router, Routes } from 'react-router-dom';
 import MainPage from "../RegisterPage/MainPage";
 import ForgotPage from "../RegisterPage/ForgotPage";
 import ActivationPage from "../RegisterPage/ActivationPage";
@@ -10,11 +10,30 @@ import GooglePage from "../RegisterPage/GooglePage";
 import MainLayout from "../layouts/MainLayout";
 import AuthPage from "../RegisterPage/AuthPage";
 import NotFoundPage from "../RegisterPage/NotFoundPage";
+
+import DesktopOne from "../RegisterPage/DesktopOne";
+import DesktopTwo from "../RegisterPage/DesktopTwo";
+
 import GlavPage from "../Pages/GlavPage";
 
 function MainRoutes() {
+  // const [showDesktopOne, setShowDesktopOne] = useState(true);
+  // const [showDesktopTwo, setShowDesktopTwo] = useState(true);
+
+  // const handleDesktopOneClose = () => {
+  //   setShowDesktopOne(false);
+  // };
+
+  // const handleDesktopTwoClose = () => {
+  //   setShowDesktopTwo(false);
+  // };
+
+
+  
   return (
-    <Routes>
+   
+
+<Routes>
       <Route element={<MainLayout />} exact>
         <Route path="/" element={<MainPage />} exact />
         <Route path="/glav" element={<GlavPage />} exact />
@@ -24,10 +43,30 @@ function MainRoutes() {
         <Route path="/password" element={<PasswordPage />} exact />
         <Route path="/authPasswordPage" element={<AuthPasswordPage exact />} />
         <Route path="/authMainPage" element={<AuthMainPage exact />} />
-        <Route path="/goolePage" element={<GooglePage />} exact />
-        <Route path="/..." element={<NotFoundPage />} exact />
+        <Route path="/googlePage" element={<GooglePage />} exact />
+        <Route path="/appMainPage" element={<NotFoundPage />} exact />
+
+  <Route path="/desktopUrl" element={<DesktopOne/>}/>
+  <Route path="/desktop" element={<DesktopTwo/>}/>
+
+
+        
+        {/* <Route
+          path="/desktop"
+          element={
+            <div>
+              {showDesktopOne && <DesktopOne onClose={handleDesktopOneClose} />}
+              {showDesktopTwo && <DesktopTwo onClose={handleDesktopTwoClose} />}
+            </div>
+          }
+        /> */}
+
       </Route>
     </Routes>
+
+
+   
+    
   );
 }
 

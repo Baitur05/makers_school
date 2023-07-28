@@ -7,8 +7,7 @@ import { BarLoader } from "react-spinners";
 
 const MainPage = ({ user, setUser }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const { t, i18n } = useTranslation();
-  const [placeholderText, setPlaceholderText] = useState("");
+  
   const responseGoogle = (res) => {
     const details = jwtDecode(res.credential);
     console.log(res);
@@ -27,6 +26,17 @@ const MainPage = ({ user, setUser }) => {
     return () => clearTimeout(timer);
   }, []);
 
+
+  // const handleLanguageChange = (e) => {
+  //   const newLanguage = e.target.value;
+  //   console.log("Changing language to:", newLanguage);
+  //   i18n.changeLanguage(newLanguage);
+  // };
+
+  const { t, i18n } = useTranslation();
+  const [placeholderText, setPlaceholderText] = useState("");
+
+
   const handleLanguageChange = (e) => {
     const newLanguage = e.target.value;
     i18n.changeLanguage(newLanguage);
@@ -35,6 +45,7 @@ const MainPage = ({ user, setUser }) => {
   useEffect(() => {
     setPlaceholderText(t("google"));
   }, [t, i18n.language]);
+
   return (
     <>
       <div>
@@ -77,7 +88,7 @@ const MainPage = ({ user, setUser }) => {
               </Link>
               <div className="flex justify-center">
                 <p>______________</p>
-                <p className="mb-2 px-2 pt-2">или</p>
+                <p className="mb-2 px-2 pt-2">{t("or")}</p>
                 <p>______________</p>
               </div>
               <button>
@@ -93,7 +104,7 @@ const MainPage = ({ user, setUser }) => {
                     {/* Для гугла второй вариант */}
                     <input
                       className="bg-white hover:bg-[#2B59C3] py-2 px-7 rounded-lg mb-1 text-[#2B59C3] hover:text-white placeholder-[#2B59C3] hover:placeholder-white cursor-pointer"
-                      placeholder="Войти через Google"
+                      placeholder={placeholderText}
                     />
                   </div>
                 </Link>
@@ -101,7 +112,7 @@ const MainPage = ({ user, setUser }) => {
                   href="/authPasswordPage"
                   className="text-[#2B59C3] mb-4 pl-20 text-lg hover:text-white"
                 >
-                  Зарегистрироваться
+                  {t("register")}
                 </a>
               </button>
             </div>
