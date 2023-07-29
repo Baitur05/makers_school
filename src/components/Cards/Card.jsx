@@ -1,12 +1,17 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import SearchComponent from "../Search/SearchComponent ";
+import DesktopTwo from "../RegisterPage/DesktopTwo";
+import DesktopCoppi from "../RegisterPage/DesktopCoppi";
+import DesktopCoppiTwo from "../RegisterPage/DesktopCoppiTwo";
+import Footer from "../Footer/Footer";
 
 const Card = () => {
   const { t } = useTranslation();
 
   return (
     <>
+    <DesktopCoppi/>
       <div className="pt-10">
         <SearchComponent />
       </div>
@@ -75,6 +80,8 @@ const Card = () => {
           </div>
         </div>
       </div>
+      <DesktopCoppiTwo/>
+      <Footer/>
     </>
   );
 };

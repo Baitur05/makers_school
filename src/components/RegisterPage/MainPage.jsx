@@ -74,13 +74,13 @@ const MainPage = ({ user, setUser }) => {
                   type="button"
                   className=" hover:bg-[#2B59C3] pt-1 pb-1.5 px-14 rounded-lg mb-4 mt-36 text-[#2B59C3] hover:text-white bg-white"
                 >
-                  Войти
+                  {t("to_come_in")}
                 </button>
               </Link>
               <Link to="/glav">
                 <ul className="mt-7 mb-14">
                   <a className="text-[#2B59C3] hover:text-white">
-                    Войти как гость
+                    {t("to")}
                   </a>
                 </ul>
               </Link>

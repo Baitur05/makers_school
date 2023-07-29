@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer';
+import Partners from '../Partners/Partners';
 
 function DesktopTwo() {
 
@@ -39,10 +41,12 @@ function DesktopTwo() {
     </div>
   
     <div className='flex text-center ' >
+      <Link to="/card">
     <button className='flex-1 text-2xl mr-2 font-semibold text-[#2B59C3] hover:text-white px-4 py-2 rounded' 
-    style={{marginLeft: "50px"}}
+    style={{marginLeft: "50px", marginTop: "17px"}}
     >{t("desktopTwo-1")}    {/* ! Курсы */}
     </button>
+      </Link>
     <button className='flex-1 text-2xl   mx-2 font-semibold  text-[#2B59C3] hover:text-white px-4 py-2 rounded' 
     style={{marginLeft: "50px"}}
     >{t('desktopTwo-2')}</button>  {/* ! Расписание */}
@@ -115,9 +119,6 @@ function DesktopTwo() {
   {t("desktopTwo-9")} <br/> <p style={{marginLeft: "5.4%"}}>{t("desktopTwo-10")}</p> 
 </label>
 
-
-
-       
         <Link to="/appMainPage">
         <button
         style={{background: "blue", color: "white"}}
@@ -133,8 +134,8 @@ function DesktopTwo() {
       </div>
 
 </div>
-
-
+<Partners/>
+<Footer/>
 </div>
    
   )

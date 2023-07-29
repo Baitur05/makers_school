@@ -13,6 +13,8 @@ import NotFoundPage from "../RegisterPage/NotFoundPage";
 import DesktopOne from "../RegisterPage/DesktopOne";
 import DesktopTwo from "../RegisterPage/DesktopTwo";
 import GlavPage from "../Pages/GlavPage";
+import Card from "../Cards/Card";
+import DesktopCoppi from "../RegisterPage/DesktopCoppi";
 
 function MainRoutes() {
   // const [showDesktopOne, setShowDesktopOne] = useState(true);
@@ -39,8 +41,12 @@ function MainRoutes() {
         <Route path="/authMainPage" element={<AuthMainPage exact />} />
         <Route path="/googlePage" element={<GooglePage />} exact />
         <Route path="/appMainPage" element={<NotFoundPage />} exact />
-        <Route path="/desktopUrl" element={<DesktopOne />} />
-        <Route path="/desktop" element={<DesktopTwo />} />
+        <Route path="/desktopUrl" element={<DesktopOne />} exact/>
+        <Route path="/desktop" element={<DesktopTwo />} exact/>
+        <Route path="/card" element={<Card/>} exact/>
+        <Route path="/card" element={<DesktopCoppi/>} exact/>
+
+        
         {/* <Route
           path="/desktop"
           element={
