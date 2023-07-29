@@ -1,15 +1,15 @@
 import React from "react";
-import SearchComponent from "../Search/SearchComponent ";
 import Card from "../Cards/Card";
 import Partners from "../Partners/Partners";
 import Footer from "../Footer/Footer";
+import MakersEdve from "../MakersEdve/MakersEdve";
 
 const GlavPage = () => {
   return (
     <div>
       <div className="mt-40"></div>
-      <SearchComponent />
       <Card />
+      <MakersEdve />
       <Partners />
       <Footer />
     </div>

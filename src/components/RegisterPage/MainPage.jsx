@@ -7,7 +7,7 @@ import { BarLoader } from "react-spinners";
 
 const MainPage = ({ user, setUser }) => {
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const responseGoogle = (res) => {
     const details = jwtDecode(res.credential);
     console.log(res);
@@ -26,7 +26,6 @@ const MainPage = ({ user, setUser }) => {
     return () => clearTimeout(timer);
   }, []);
 
-
   // const handleLanguageChange = (e) => {
   //   const newLanguage = e.target.value;
   //   console.log("Changing language to:", newLanguage);
@@ -35,7 +34,6 @@ const MainPage = ({ user, setUser }) => {
 
   const { t, i18n } = useTranslation();
   const [placeholderText, setPlaceholderText] = useState("");
-
 
   const handleLanguageChange = (e) => {
     const newLanguage = e.target.value;
