@@ -1,9 +1,17 @@
 import React from "react";
+import Card from "../Cards/Card";
+import Partners from "../Partners/Partners";
+import Footer from "../Footer/Footer";
+import DesktopOne from "./DesktopOne";
 
 const NotFoundPage = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-black text-white text-4xl">
-      NotFoundPage
+    <div >
+        <div className="mt-96"></div>
+        <DesktopOne/>
+      {/* <Card /> */}
+      <Partners />
+      <Footer />
     </div>
   );
 };

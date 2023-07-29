@@ -9,7 +9,6 @@ import SearchComponent from "./components/Search/SearchComponent ";
 import { useTranslation } from "react-i18next";
 import { Router } from "react-router-dom";
 
-
 const App = () => {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState("ru");
@@ -26,12 +25,11 @@ const App = () => {
 
   return (
     <div>
-      <div className="mt-96"></div>
-      <Card />
       <MainRoutes />
-      <Partners />
-      <Footer />
-      {/* Остальной код был закомментирован, и его можно добавить обратно при необходимости */}
+      {/* <div className="mt-96"></div> */}
+      {/* <Card /> */}
+      {/* <Partners />
+      <Footer /> */}
     </div>
   );
 };

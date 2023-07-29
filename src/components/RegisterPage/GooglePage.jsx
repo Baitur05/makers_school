@@ -44,4 +44,3 @@ function GooglePage() {
 }
 
 export default GooglePage;
-
