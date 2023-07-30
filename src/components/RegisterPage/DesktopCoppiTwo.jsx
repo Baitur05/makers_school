@@ -23,8 +23,8 @@ function DesktopCoppiTwo() {
         <div class="p-8 sm:p-10 lg:flex-auto">   
           <div>
   
-            <h1 class="text-4xl font-semibold font-sans antialiased text-40 tracking-wide leading-55 text-left w-634 h-165 top-58 left-33 text-indigo-600"> <br/> Самые полезные  IT курсы. <br/>
-  {t("desktopTwo-5")} <br/> {t("desktopTwo-6")}</h1>    {/* !  С нами ты легко устроишься*/}
+            <h1 class="text-4xl font-semibold font-sans antialiased text-40 tracking-wide leading-55 text-left w-634 h-165 top-58 left-33 text-indigo-600"> <br/> 
+  {t("my")} <br/> {t("my_1")}  <br /> {t("my_2")}</h1>    {/* !  С нами ты легко устроишься*/}
             
           </div>
   

@@ -134,8 +134,8 @@ function DesktopTwo() {
       </div>
 
 </div>
-<Partners/>
-<Footer/>
+{/* <Partners/>
+<Footer/> */}
 </div>
    
   )

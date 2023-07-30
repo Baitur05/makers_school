@@ -15,6 +15,7 @@ import DesktopTwo from "../RegisterPage/DesktopTwo";
 import GlavPage from "../Pages/GlavPage";
 import Card from "../Cards/Card";
 import DesktopCoppi from "../RegisterPage/DesktopCoppi";
+import MakersEdve from "../MakersEdve/MakersEdve";
 
 function MainRoutes() {
   // const [showDesktopOne, setShowDesktopOne] = useState(true);
@@ -44,7 +45,9 @@ function MainRoutes() {
         <Route path="/desktopUrl" element={<DesktopOne />} exact/>
         <Route path="/desktop" element={<DesktopTwo />} exact/>
         <Route path="/card" element={<Card/>} exact/>
-        <Route path="/card" element={<DesktopCoppi/>} exact/>
+        <Route path="/desktopCard" element={<DesktopCoppi/>} exact/>
+        <Route path="/makers" element={<MakersEdve/>} exact/>
+                
 
         
         {/* <Route
