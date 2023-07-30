@@ -81,6 +81,13 @@ const Card = () => {
         </div>
       </div>
       <DesktopCoppiTwo/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
       <Footer/>
     </>
   );
